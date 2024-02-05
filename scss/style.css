@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "Cursive1";
+  src: url("../static-assets/fonts/cursive-1.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cursive2";
+  src: url("../static-assets/fonts/cursive-2.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Elegant1";
+  src: url("../static-assets/fonts/elegant-1.woff2") format("woff2");
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: transparent;
+  position: absolute;
+  z-index: 99;
+  color: white;
+  width: 100%;
+}
+header .header-content {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+header .header-content .header-block {
+  height: 40px;
+  width: 80%;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+header .header-content .header-block .nav-button {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Elegant1";
+  font-size: 12px;
+}
+@media (min-width: 992px) {
+  header .header-content .header-block .nav-button {
+    font-size: 24px;
+  }
+}
+
+.main-content .hero {
+  height: 100vh;
+  width: 100%;
+  /* The image used */
+  background-image: url("../static-assets/images/GS-hero.jpeg");
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: -730px bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 992px) {
+  .main-content .hero {
+    background-position: center;
+  }
+}
+.main-content .hero .hero-blanket {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.main-content .hero .title {
+  font-family: "Cursive2";
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+}
+@media (min-width: 992px) {
+  .main-content .hero .title {
+    font-size: 80px;
+  }
+}
+.main-content .fairytale {
+  width: 100%;
+  background-color: #303003;
+  /* The actual timeline (the vertical ruler) */
+  /* The actual timeline (the vertical ruler) */
+  /* Container around content */
+  /* The circles on the timeline */
+  /* Place the container to the left */
+  /* Place the container to the right */
+  /* Fix the circle for containers on the right side */
+  /* The actual content */
+}
+.main-content .fairytale .tale-title {
+  color: white;
+  font-family: "Cursive1";
+}
+.main-content .fairytale .tale-title h2 {
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 44px;
+}
+.main-content .fairytale .timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+.main-content .fairytale .timeline::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+}
+.main-content .fairytale .container {
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  margin-bottom: 40px;
+  width: 175px;
+}
+.main-content .fairytale .container::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: -17px;
+  background-color: white;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.main-content .fairytale .left {
+  left: 12px;
+}
+.main-content .fairytale .left::after {
+  left: 100%;
+}
+.main-content .fairytale .right {
+  left: 50%;
+  margin-left: 16px;
+}
+.main-content .fairytale .right::after {
+  left: -16px;
+}
+.main-content .fairytale .content {
+  position: relative;
+  border-radius: 6px;
+  font-family: "Elegant1";
+}
+.main-content .fairytale .content h2 {
+  color: white;
+  margin: 10px 0px;
+}
+.main-content .fairytale .content .tale-image {
+  border: 12px solid white;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.main-content .fairytale .content .tale-image img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
