@@ -43,6 +43,8 @@ header .header-content .header-block a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: white;
+  text-decoration: none;
 }
 header .header-content .header-block a .nav-button {
   display: inline-flex;
@@ -63,7 +65,7 @@ header .header-content .header-block a .nav-button {
   /* The image used */
   background-image: url("../static-assets/images/GS-hero.jpeg");
   /* Create the parallax scrolling effect */
-  background-attachment: fixed;
+  background-attachment: local;
   background-position: -730px bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -176,26 +178,25 @@ header .header-content .header-block a .nav-button {
   z-index: 1;
 }
 .main-content .fairytale .left {
-  left: 12px;
+  left: calc(50% - 175px - 16px);
 }
 .main-content .fairytale .left::after {
-  left: 100%;
+  left: calc(100% + 5px);
 }
 .main-content .fairytale .left .tale-brief {
-  right: -204px;
+  right: calc(-175px - 16px - 4px - 16px);
 }
 .main-content .fairytale .right {
-  left: 50%;
-  margin-left: 16px;
+  left: calc(50% + 6px + 16px);
 }
 .main-content .fairytale .right .content h2 {
   text-align: right;
 }
 .main-content .fairytale .right .tale-brief {
-  right: 204px;
+  right: calc(177px + 16px + 16px);
 }
 .main-content .fairytale .right::after {
-  left: -28px;
+  right: calc(100% + 3px);
 }
 
 /*# sourceMappingURL=style.css.map */
