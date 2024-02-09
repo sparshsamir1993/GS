@@ -66,7 +66,7 @@ header .header-content .header-block a .nav-button {
   background-image: url("../static-assets/images/GS-hero.jpeg");
   /* Create the parallax scrolling effect */
   background-attachment: local;
-  background-position: -730px bottom;
+  background-position: -680px bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -197,6 +197,43 @@ header .header-content .header-block a .nav-button {
 }
 .main-content .fairytale .right::after {
   right: calc(100% + 3px);
+}
+.main-content .gallery {
+  background-color: #282828;
+  /* Create four equal columns that sits next to each other */
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+}
+.main-content .gallery .gallery-title {
+  font-family: "Cursive2";
+  font-size: 40px;
+  text-align: center;
+  color: #c8c8c8;
+  padding: 0px 16px;
+}
+.main-content .gallery .gallery-title h2 {
+  margin-top: 0;
+  padding-top: 56px;
+}
+.main-content .gallery .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.main-content .gallery .column {
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+.main-content .gallery .column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .main-content .gallery .column {
+    flex: 25%;
+    max-width: 25%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

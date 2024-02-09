@@ -74,7 +74,7 @@ header {
 
         /* Create the parallax scrolling effect */
         background-attachment: local;
-        background-position: -730px bottom;
+        background-position: -680px bottom;
         background-repeat: no-repeat;
         background-size: cover;
 
@@ -223,6 +223,49 @@ header {
 
             &::after {
                 right: calc(100% + 3px);
+            }
+        }
+    }
+
+    .gallery {
+        background-color: rgb(40, 40, 40);
+
+        .gallery-title {
+            font-family: "Cursive2";
+            font-size: 40px;
+            text-align: center;
+            color: rgb(200, 200, 200);
+            padding: 0px 16px;
+
+            h2 {
+                margin-top: 0;
+                padding-top: 56px;
+            }
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .column {
+            flex: 50%;
+            max-width: 50%;
+            padding: 0 4px;
+        }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @include lg {
+            .column {
+                flex: 25%;
+                max-width: 25%;
             }
         }
     }
