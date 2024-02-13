@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 }
@@ -25,38 +29,149 @@ header {
   color: white;
   width: 100%;
 }
-header .header-content {
-  height: 60px;
-  display: flex;
-  justify-content: center;
+header .header-content-dweb {
+  display: none;
 }
-header .header-content .header-block {
-  height: 40px;
-  width: 80%;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 10px;
+@media (min-width: 992px) {
+  header .header-content-dweb {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+  }
+  header .header-content-dweb .header-block {
+    height: 40px;
+    width: 80%;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  header .header-content-dweb .header-block a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+  }
+  header .header-content-dweb .header-block a .nav-button {
+    display: inline-flex;
+    align-items: center;
+    font-family: "Elegant1";
+    font-size: 12px;
+    color: white;
+    font-size: 24px;
+  }
 }
-header .header-content .header-block a {
+@media (min-width: 992px) {
+  header .header-content-mweb {
+    display: none;
+  }
+}
+header .header-content-mweb .nav-header {
+  height: 93px;
+}
+header .header-content-mweb .nav-header #nav-icon {
+  width: 40px;
+  height: 45px;
+  position: fixed;
+  z-index: 4;
+  right: 0;
+  margin: 24px 16px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+header .header-content-mweb .nav-header #nav-icon span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+header .header-content-mweb .nav-header #nav-icon span:nth-child(1) {
+  top: 0px;
+}
+header .header-content-mweb .nav-header #nav-icon span:nth-child(2) {
+  top: 10px;
+}
+header .header-content-mweb .nav-header #nav-icon span:nth-child(3) {
+  top: 10px;
+}
+header .header-content-mweb .nav-header #nav-icon span:nth-child(4) {
+  top: 20px;
+}
+header .header-content-mweb .nav-header #nav-icon.open span {
+  background-color: #282828;
+}
+header .header-content-mweb .nav-header #nav-icon.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+header .header-content-mweb .nav-header #nav-icon.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+header .header-content-mweb .nav-header #nav-icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+header .header-content-mweb .nav-header #nav-icon.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+header .header-content-mweb .nav-wrapper {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  right: -70%;
+  background-color: #c8c8c8;
+  width: 70%;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  opacity: 0;
+}
+header .header-content-mweb .nav-wrapper .nav-links {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: white;
+  margin-top: 160px;
+  margin-left: 40px;
+}
+header .header-content-mweb .nav-wrapper .nav-links a {
+  margin-bottom: 40px;
   text-decoration: none;
+  color: #333333;
+  font-size: 1.5rem;
 }
-header .header-content .header-block a .nav-button {
-  display: inline-flex;
-  align-items: center;
-  font-family: "Elegant1";
-  font-size: 12px;
-  color: white;
-}
-@media (min-width: 992px) {
-  header .header-content .header-block a .nav-button {
-    font-size: 24px;
-  }
+header .header-content-mweb .nav-wrapper.open {
+  right: 0;
+  opacity: 1;
 }
 
 .main-content .hero {
