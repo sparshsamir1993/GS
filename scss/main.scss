@@ -358,6 +358,23 @@ header {
                 right: calc(100% + 3px);
             }
         }
+
+        &.future {
+            .container {
+                margin-bottom: 100px;
+
+                .content {
+                    .tale-brief {
+                        top: 40px;
+                    }
+
+                    .tale-image {
+                        height: 160px;
+                        border: 0;
+                    }
+                }
+            }
+        }
     }
 
     .gallery {

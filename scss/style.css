@@ -321,6 +321,16 @@ header .header-content-mweb .nav-wrapper.open {
 .main-content .fairytale .right::after {
   right: calc(100% + 3px);
 }
+.main-content .fairytale.future .container {
+  margin-bottom: 100px;
+}
+.main-content .fairytale.future .container .content .tale-brief {
+  top: 40px;
+}
+.main-content .fairytale.future .container .content .tale-image {
+  height: 160px;
+  border: 0;
+}
 .main-content .gallery {
   background-color: #282828;
   /* Create four equal columns that sits next to each other */
