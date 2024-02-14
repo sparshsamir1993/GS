@@ -48,6 +48,7 @@ header .header-content-dweb {
     margin-top: 10px;
   }
   header .header-content-dweb .header-block a {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,7 +75,7 @@ header .header-content-mweb .nav-header {
 header .header-content-mweb .nav-header #nav-icon {
   width: 40px;
   height: 45px;
-  position: fixed;
+  position: absolute;
   z-index: 4;
   right: 0;
   margin: 24px 16px;
@@ -117,6 +118,9 @@ header .header-content-mweb .nav-header #nav-icon span:nth-child(3) {
 }
 header .header-content-mweb .nav-header #nav-icon span:nth-child(4) {
   top: 20px;
+}
+header .header-content-mweb .nav-header #nav-icon.open {
+  position: fixed;
 }
 header .header-content-mweb .nav-header #nav-icon.open span {
   background-color: #282828;
@@ -164,6 +168,7 @@ header .header-content-mweb .nav-wrapper .nav-links {
   margin-left: 40px;
 }
 header .header-content-mweb .nav-wrapper .nav-links a {
+  cursor: pointer;
   margin-bottom: 40px;
   text-decoration: none;
   color: #333333;
@@ -230,6 +235,9 @@ header .header-content-mweb .nav-wrapper.open {
   padding: 20px 0;
   text-align: center;
   font-size: 44px;
+}
+.main-content .fairytale .timeline-wrap {
+  padding-bottom: 16px;
 }
 .main-content .fairytale .timeline {
   position: relative;
